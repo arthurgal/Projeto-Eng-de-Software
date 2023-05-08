@@ -3,10 +3,10 @@ package database
 import (
 	"log"
 
-	
+	"github/arthurgal/Projeto-Eng-de-Software/models"
+
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"github/arthurgal/Projeto-Eng-de-Software/models"
 )
 
 var (
@@ -22,4 +22,6 @@ func ConectaComBancoDeDados() {
 	}
 
 	DB.AutoMigrate(&models.Produto{})
+	DB.AutoMigrate(&models.Carrinho{})
+	DB.AutoMigrate(&models.Usuario{})
 }
