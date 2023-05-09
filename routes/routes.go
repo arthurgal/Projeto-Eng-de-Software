@@ -33,5 +33,7 @@ func HandleRequest() {
 	r.PUT("/usuario/:id", controllers.EditaUsuario)
 	r.DELETE("/usuario/:id", controllers.DeletaUsuario)
 
+	r.POST("/usuario/:id/produto", controllers.AdicionaProdutoNoUsuario)
+
 	r.Run()
 }
