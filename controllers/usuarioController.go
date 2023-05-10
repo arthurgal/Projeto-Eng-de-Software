@@ -65,3 +65,27 @@ func DeletaUsuario(c *gin.Context) {
 		"Deletado": "usuario foi deletado"})
 
 }
+
+func AdicionaProdutoNoUsuario(c *gin.Context) {
+	id := c.Param("id")
+
+	var usuario models.Usuario
+	if err := database.DB.First(&usuario, id).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Usuario não encontrado"})
+		return
+	}
+
+	var produto models.Produto
+	if err := c.ShouldBindJSON(&produto); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Dados inválidos"})
+		return
+	}
+
+	produto.UsuarioID = usuario.ID
+	if err := database.DB.Create(&produto).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Erro ao criar produto"})
+		return
+	}
+
+	c.Status(http.StatusCreated)
+}

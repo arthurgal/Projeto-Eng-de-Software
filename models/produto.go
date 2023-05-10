@@ -10,5 +10,7 @@ type Produto struct {
 	Valor      float64 `json:"valor"`
 	Descricao  string  `json:"descricao"`
 	Qtd        int     `json:"qtd"`
+	Vendido    bool    `json:"vendido"`
 	CarrinhoID uint
+	UsuarioID  uint
 }
