@@ -1,0 +1,8 @@
+.div-bloco{
+    border-radius: 18px;
+    border-width: 2px;
+    border-color: #ff7f50;
+    border: solid;
+    padding: 3%;
+    width: fit-content;
+}

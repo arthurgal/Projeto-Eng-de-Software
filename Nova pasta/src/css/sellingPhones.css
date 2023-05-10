@@ -1,0 +1,33 @@
+.div-padrao{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+}
+.div-main{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+.div-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.button-novo-produto{
+    background-color: #ff7f50;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: aliceblue;
+}
+.button-novo-produto:hover{
+  cursor: pointer;
+}
+
+.div-listing{
+        padding: 10%;
+}
+

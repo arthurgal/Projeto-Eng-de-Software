@@ -1,0 +1,22 @@
+.div-listing-produtos{
+    display: grid;
+    grid-template-columns: 45% 45% 10%;
+    background-color: aliceblue;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+}
+
+.img{
+    width: 20px;
+    height: 20px;
+    
+}
+.img:hover{
+    cursor: pointer;
+}
+
+.buttons-div{
+    display: flex;
+    justify-content: space-around;
+}
